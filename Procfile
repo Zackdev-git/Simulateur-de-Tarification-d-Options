@@ -1,1 +1,1 @@
-web: gunicorn option_pricing:server
+web: gunicorn mo:server
