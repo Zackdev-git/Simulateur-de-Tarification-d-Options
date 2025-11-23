@@ -99,7 +99,7 @@ class VasicekSimulator:
 # Initialisation de l'application Dash
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.MINTY], suppress_callback_exceptions=True)
 app.title = "Simulateur de Tarification d'Options"
-
+server = app.server
 # Styles CSS
 app.index_string = '''
 <!DOCTYPE html>
@@ -826,4 +826,5 @@ def update_vasicek(n_clicks, r0, mu, a, sigma, T, steps, sims):
         return go.Figure(), f"❌ Erreur lors de la simulation: {str(e)}"
 
 if __name__ == '__main__':
+
     app.run(debug=True, port=8050)
