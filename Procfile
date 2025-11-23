@@ -1,1 +1,1 @@
-web: gunicorn mo:app.server
+web: gunicorn mo:server
